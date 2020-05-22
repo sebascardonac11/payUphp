@@ -18,10 +18,11 @@ $(document).ready(function(){
 		  	     "apiLogin": "pRRXKOl8ikMmt9u",
 		  	     "apiKey": "4Vj8eK4rloUd272L48hsrarnUA"
 		  		 }
-		  	 }
+		  	 },
 		  	success: function(result){
 		    $("#msgid").html(result);
-		  }});
+		  }
+		  	 });
 	  
 	});
 
