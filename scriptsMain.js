@@ -6,7 +6,8 @@ $(document).ready(function(){
  $(".test").click(function( event ) {
 	  $.ajax({url: "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi", 
 		  	method: "POST",
-		  	type: 'json',
+		  	headers: {  'Access-Control-Allow-Origin': '*' },
+		  	type: 'JSON',
 		  	headers:null,
 		  	 data: { 
 		  		 "test": false,
