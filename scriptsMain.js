@@ -2,7 +2,6 @@
  * 
  */
 $(document).ready(function(){
- $("#msgid").html("This is Hello World by JQuery");
 
  $(".test").click(function( event ) {
 		alert("Probando test");
@@ -21,8 +20,14 @@ $(document).ready(function(){
 		  	 },
 		  	success: function(result){
 		    $("#msgid").html(result);
+		    
 		  }
-		  	 });
+		  	 }).done(function() {
+		  	    alert( "success" );
+		  	  })
+		  	  .fail(function() {
+		  	    alert( "error" );
+		  	  });
 	  
 	});
 

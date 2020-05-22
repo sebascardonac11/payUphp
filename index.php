@@ -7,10 +7,7 @@
     <body>
         <h1>PAYU con PHP!!!!</h1>
         <div class="test" id="test3">Test</div>
-        <a   class="test2"  href="#">link test</a>
-        <div id="target">
-  Click here
-</div>
+      
 
 
 <div id="msgid"></div>
