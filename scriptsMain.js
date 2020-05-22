@@ -6,10 +6,11 @@ $(document).ready(function(){
 });
 
 $(".test").click(function( event ) {
+	alert("Probando test");
   console.log( "clicked: " );
 });
 $(".test2").click(function() {
-	  alert("Probando");
+	  alert("Probando test2 ");
 	  console.log( "clicked: "  );
 	});
 
