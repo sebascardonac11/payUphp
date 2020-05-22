@@ -6,6 +6,8 @@ $(document).ready(function(){
  $(".test").click(function( event ) {
 	  $.ajax({url: "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi", 
 		  	method: "POST",
+		  	type: 'POST',
+            dataType: 'json',
 		  	headers:null,
 		  	 data: { 
 		  		 "test": false,
@@ -23,8 +25,8 @@ $(document).ready(function(){
 		  	 }).done(function() {
 		  	    alert( "success" );
 		  	  })
-		  	  .fail(function(res) {
-		  	    alert( "error"+res );
+		  	  .fail(function(jqXHR, textStatus) {
+		  	    alert( "error: "+textStatus );
 		  	  });
 	  
 	});
