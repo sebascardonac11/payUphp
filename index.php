@@ -11,5 +11,9 @@
         <div id="target">
   Click here
 </div>
+
+
+<div id="msgid"></div>
+
     </body>
 </html>

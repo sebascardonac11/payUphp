@@ -1,6 +1,10 @@
 /**
  * 
  */
+$(document).ready(function(){
+ $("#msgid").html("This is Hello World by JQuery");
+});
+
 $(".test").click(function( event ) {
   console.log( "clicked: " );
 });
