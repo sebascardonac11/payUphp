@@ -7,5 +7,6 @@
     <body>
         <h1>PAYU con PHP!!!!</h1>
         <div class="test">Test</div>
+        <a   class="test2"  href="#">link test</a>
     </body>
 </html>
