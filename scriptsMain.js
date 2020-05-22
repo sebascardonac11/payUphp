@@ -1,6 +1,6 @@
 /**
  * 
  */
-$('.test').click(function( event ) {
+$(".test").click(function( event ) {
   console.log( "clicked: " + event.target );
 });
