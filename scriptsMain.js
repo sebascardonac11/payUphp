@@ -6,6 +6,7 @@ $(document).ready(function(){
  $(".test").click(function( event ) {
 	  $.ajax({url: "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi", 
 		  	method: "POST",
+		  	crossDomain: true,
 		  	headers: {  'Access-Control-Allow-Origin': '*' },
 		  	type: 'JSON',
 		  	headers:null,
@@ -23,7 +24,7 @@ $(document).ready(function(){
 		    
 		  },
 	        error: function (error) {
-	        	  $("#msgid").html(result);
+	        	  $("#msgid").html(error);
 	            console.log(error);
 	        }
 		  	 })
