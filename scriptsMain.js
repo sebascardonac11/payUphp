@@ -7,6 +7,7 @@ $(document).ready(function(){
 	  $.ajax({url: "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi", 
 		  	method: "POST",
 		  	crossDomain: true,
+		  	contentType:'application/x-www-form-urlencoded; charset=utf-8',
 		  	headers: {  'Access-Control-Allow-Origin': '*' },
 		  	type: 'JSON',
 		  	headers:null,
