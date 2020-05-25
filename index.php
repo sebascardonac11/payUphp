@@ -6,8 +6,10 @@
     </head>
     <body>
         <h1>PAYU con PHP!!!!</h1>
-        <div class="test" id="test3">Test</div>
+        <div class="test" id="">Test</div>
       
+      
+        <div class="test2" id="">Test Get</div>
 
 
 <div id="msgid"></div>

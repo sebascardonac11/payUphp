@@ -33,5 +33,11 @@ $(document).ready(function(){
 	});
 
 
+ $(".test").click(function( event ) {
+	 	
+	 $.get("https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi").done(function (data) {
+		    console.log(data);
+		});
+	});
 });
 
