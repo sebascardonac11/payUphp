@@ -29,6 +29,7 @@ $data = array(
             "apiLogin"  => "pRRXKOl8ikMmt9u",
             "apiKey"    =>"4Vj8eK4rloUd272L48hsrarnUA")
             );
+echo ("<pre>".$data."</pre>");
 //url contra la que atacamos
 $ch = curl_init("https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi");
 //a true, obtendremos una respuesta de la url, en otro caso,
@@ -38,6 +39,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 //enviamos el array data
 curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($data));
+echo "Enviando a rest";
 //obtenemos la respuesta
 $response = curl_exec($ch);
 // Se cierra el recurso CURL y se liberan los recursos del sistema
