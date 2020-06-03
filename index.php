@@ -42,10 +42,11 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($data));
 $response = curl_exec($ch);
 // Se cierra el recurso CURL y se liberan los recursos del sistema
 curl_close($ch);
+echo ("Evaluando respuesta ");
 if(!$response) {
     echo "Error";
 }else{
-   echo "La respuesta es: ".$response;
+    var_dump($response);
 }
 
 ?>
