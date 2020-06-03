@@ -58,7 +58,6 @@ $data = json_decode(file_get_contents('php://input'), true);
 $response = curl_exec($ch);
 // Se cierra el recurso CURL y se liberan los recursos del sistema
 curl_close($ch);
-echo '<pre>'.print_r(json_decode(file_get_contents("php://input")),1).'</pre>';
 echo ("Evaluando respuesta </br>".$response."</div>");
 
 if(!$response) {
