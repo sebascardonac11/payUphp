@@ -17,7 +17,7 @@
 
 <div>
 
-Probando la libreria Curl
+Probando la libreria Curl</br>
 <?php
 
 //datos a enviar
@@ -48,14 +48,14 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 //establecemos el verbo http que queremos utilizar para la petición
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 //enviamos el array data
-curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($data));
+curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query(json_encode($data)));
 //obtenemos la respuesta
 $response = curl_exec($ch);
 // Se cierra el recurso CURL y se liberan los recursos del sistema
 curl_close($ch);
-echo ("Evaluando respuesta ");
+echo ("Evaluando respuesta </br>");
 if(!$response) {
-    echo "Error";
+    echo "Error</br>";
 }else{
     var_dump($response);
 }
