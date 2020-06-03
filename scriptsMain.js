@@ -8,7 +8,7 @@ $(document).ready(function(){
 		  	method: "POST",
 		  	crossDomain: true,
 		  	contentType:'application/x-www-form-urlencoded; charset=utf-8',
-		  	headers: {  'Access-Control-Allow-Origin': '*' },
+		  	headers: {  'Access-Control-Allow-Origin': 'http://ec2-18-223-187-69.us-east-2.compute.amazonaws.com' },
 		  	type: 'JSON',
 		  	headers:null,
 		  	 data: { 
