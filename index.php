@@ -5,6 +5,7 @@
         <script type="text/javascript" src="scriptsMain.js"></script>
     </head>
     <body>
+    <?php phpinfo(); ?>
         <h1>PAYU con PHP!!!!</h1>
         <div class="test" id="">Test</div>
       
