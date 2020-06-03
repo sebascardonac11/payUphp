@@ -37,7 +37,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi");
 //curl_setopt($ch, CURLOPT_HEADER, 0);
 // Set the content type to application/json
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Accept:application/json'));
 
 //a true, obtendremos una respuesta de la url, en otro caso,
 //true si es correcto, false si no lo es
@@ -46,10 +46,13 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 //enviamos el array data
 curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($payload));
+
+$data = json_decode(file_get_contents('php://input'), true);
 //obtenemos la respuesta
 $response = curl_exec($ch);
 // Se cierra el recurso CURL y se liberan los recursos del sistema
 curl_close($ch);
+echo '<pre>'.print_r(json_decode(file_get_contents("php://input")),1).'</pre>';
 echo ("Evaluando respuesta </br>".$response."</div>");
 
 if(!$response) {
