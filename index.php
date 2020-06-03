@@ -22,7 +22,7 @@ Probando la libreria Curl</br>
 
 //datos a enviar
 $data = array(
-        "test"      => "false",
+        "test"      => false,
         "language"  => "en",
         "command"   => "PING",
         "merchant"  => array(
@@ -33,11 +33,6 @@ $payload = json_encode($data);
 echo "Datos a enviar" .$payload."</br>" ;
 //url contra la que atacamos
 $ch = curl_init();
-if (!$ch) {
-    echo "Hay un error en init </br>";
-}else{
-    echo "Curl Iniciado</br>";
-}
 // Establece la URL y otras opciones apropiadas
 curl_setopt($ch, CURLOPT_URL, "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi");
 //curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -55,13 +50,15 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($payload));
 $response = curl_exec($ch);
 // Se cierra el recurso CURL y se liberan los recursos del sistema
 curl_close($ch);
-echo ("Evaluando respuesta </br>");
+echo ("Evaluando respuesta </br>".$response."</div>");
+
 if(!$response) {
     echo "Error</br>";
 }else{
     var_dump($response);
 }
 
+echo "</div>";
 ?>
 
 </div>
