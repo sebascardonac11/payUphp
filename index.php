@@ -41,7 +41,7 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 
 // Establece la URL y otras opciones apropiadas
 curl_setopt($ch, CURLOPT_URL, "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi");
-//curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_HEADER, array('Content-Type:application/json'));
 // Set the content type to application/json
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Accept:application/json'));
 
