@@ -32,13 +32,15 @@ $data = array(
 //url contra la que atacamos
 $ch = curl_init();
 if (!$ch) {
-    echo "Hay un error en init";
+    echo "Hay un error en init </br>";
 }else{
-    echo "Curl Iniciado";
+    echo "Curl Iniciado</br>";
 }
 // Establece la URL y otras opciones apropiadas
 curl_setopt($ch, CURLOPT_URL, "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi");
 curl_setopt($ch, CURLOPT_HEADER, 0);
+// Set the content type to application/json
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
 //a true, obtendremos una respuesta de la url, en otro caso,
 //true si es correcto, false si no lo es
