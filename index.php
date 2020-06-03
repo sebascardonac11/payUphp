@@ -32,7 +32,10 @@ $data = array(
 echo ("<pre>".$data."</pre>");
 //url contra la que atacamos
 $ch = curl_init("https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi");
-echo "Opciones 1";
+if (!$ch) {
+    echo "Hay un error en init";
+}
+echo "Opciones 1".$ch;
 //a true, obtendremos una respuesta de la url, en otro caso,
 //true si es correcto, false si no lo es
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
