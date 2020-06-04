@@ -62,7 +62,7 @@ echo ("Evaluando respuesta </br>".$response."</div>");
 if(!$response) {
     echo "Error</br>";
 }else{
-    var_dump($response);
+    echo "Solicitud recibida</br>";
 }
 
 echo "</div>";
