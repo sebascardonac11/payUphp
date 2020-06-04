@@ -57,7 +57,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($payload));
 $response = curl_exec($ch);
 // Se cierra el recurso CURL y se liberan los recursos del sistema
 curl_close($ch);
-echo ("Evaluando respuesta </br>".$response."</div>");
+echo ("Evaluando respuesta </br>"."</div>");
 
 if(!$response) {
     echo "Error</br>";
