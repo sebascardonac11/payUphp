@@ -63,7 +63,7 @@ if(!$response) {
     echo "Error</br>";
 }else{
     echo "Solicitud recibida</br>";
-    echo '<pre>'.print_r(json_decode(file_get_contents("php://input")),1).'</pre>';
+    echo '<pre>'.json_decode($response).'</pre>';
 }
 
 echo "</div>";
