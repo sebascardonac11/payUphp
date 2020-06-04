@@ -53,7 +53,6 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 //enviamos el array data
 curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($payload));
 
-$data = json_decode(file_get_contents('php://input'), true);
 //obtenemos la respuesta
 $response = curl_exec($ch);
 // Se cierra el recurso CURL y se liberan los recursos del sistema
